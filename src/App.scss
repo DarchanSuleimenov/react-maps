@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #2a2c2d;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 6px;
+  //   background-color: #2a2c2d;
+}
+
+.content > * {
+  flex-grow: 1;
+  max-width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+  .content > * {
+    max-width: 100%;
+  }
+  .content > .list {
+    order: 1;
+  }
+  .content > .map {
+    min-height: 300px;
+    margin-bottom: 8px;
+  }
+}
